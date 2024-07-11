@@ -1,0 +1,15 @@
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/oauth-callback.html", "dest": "/oauth-callback.html" },
+    { "src": "/(.*)", "dest": "/" }
+  ]
+}
